@@ -25,6 +25,7 @@ const seedDB = async () => {
         let randomImage = Math.floor(Math.random()*10+1);
         let randomCate = Math.floor(Math.random()*3);
         let randomDiscount = Math.floor(Math.random()*20);
+        let rd = Math.floor(Math.random()*2);
         const product = new Product({
             title: `${color[randomName]+" "+name[randomName]}`,
             description: description,
@@ -34,7 +35,8 @@ const seedDB = async () => {
             discount: randomDiscount+randomNum,
             image: `product_${randomImage}`,
             categories: `${categories[randomCate]}`,
-            color: `${color[randomName]}`
+            color: `${color[randomName]}`,
+            onsale: `${rd}`
         })
         await product.save();
    }
@@ -61,6 +63,6 @@ const seedBlog = async() => {
   
 
 }
+seedDB()
 
-seedBlog()
 

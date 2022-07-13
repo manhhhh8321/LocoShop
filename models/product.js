@@ -11,7 +11,8 @@ const productSchema = new Schema ({
     discount: {type: Number, default: 0},
     image: String,
     categories: Array,
-    color: String
+    color: String,
+    onsale: Number
 })
 
 module.exports = mongoose.model('Product', productSchema);
