@@ -80,7 +80,7 @@
 						<!-- Product 1 -->
 						
 						<% for(let i=0; i<4; i++) { %>
-							<% let newPr = Math.floor((product[i].price / product[i].discount)*100) %>
+							<% let newPr=Math.floor((product[i].discount/product[i].price)*100) %>
 							<% if (product[i].categories[0] == 'Men') { %>
 								<div class="product-item men ">
 									<div class="product discount product_filter">
@@ -91,7 +91,7 @@
 										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-<%= newPr %>% </span></div>
 										<div class="product_info">
 											<h6 class="product_name"><a href="single.html"><%= product[i].title %> </a></h6>
-											<div class="product_price">$<%= product[i].price %> <span>$<%= product[i].discount %> </span></div>
+											<div class="product_price">$<%= product[i].price %> <span>$<%= product[i].price + product[i].discount %> </span></div>
 										</div>
 									</div>
 									<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
@@ -106,7 +106,7 @@
 										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-<%= newPr %>% </span></div>
 										<div class="product_info">
 											<h6 class="product_name"><a href="single.html"><%= product[i].title %> </a></h6>
-											<div class="product_price">$<%= product[i].price %> <span>$<%= product[i].discount %> </span></div>
+											<div class="product_price">$<%= product[i].price %> <span>$<%= product[i].price + product[i].discount %> </span></div>
 										</div>
 									</div>
 									<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
@@ -121,7 +121,7 @@
 										<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-<%= newPr %>%  </span></div>
 										<div class="product_info">
 											<h6 class="product_name"><a href="single.html"><%= product[i].title %> </a></h6>
-											<div class="product_price">$<%= product[i].price %> <span>$<%= product[i].discount %> </span></div>
+											<div class="product_price">$<%= product[i].price %> <span>$<%= product[i].price + product[i].discount %> </span></div>
 										</div>
 									</div>
 									<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
@@ -196,7 +196,7 @@
 
 							<!-- Slide 1 -->
 							<% for( let pr of product ) { %>
-								<% let newPr = Math.floor((pr.price / pr.discount)*100) %> 
+								<% let newPr=Math.floor((pr.discount/pr.price)*100) %>
 								<div class="owl-item product_slider_item">
 									<div class="product-item">
 										<div class="product discount">
@@ -207,7 +207,7 @@
 											<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-<%= newPr %>%  </span></div>
 											<div class="product_info">
 												<h6 class="product_name"><a href="single.html"><%= pr.title %> </a></h6>
-												<div class="product_price">$<%= pr.price %><span>$<%= pr.discount %> </span></div>
+												<div class="product_price">$<%= pr.price %><span>$<%= pr.price + pr.discount %> </span></div>
 											</div>
 										</div>
 									</div>

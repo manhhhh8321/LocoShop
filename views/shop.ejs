@@ -166,7 +166,7 @@
 
 										<% for(let i=0; i<prs.length; i++) {%>
 											<% if (prs[i].onsale==1) { %>
-												<% let newPr=Math.floor((prs[i].price / prs[i].discount)*100) %>
+												<% let newPr=Math.floor((prs[i].discount/prs[i].price)*100) %>
 													<div class="product-item men">
 														<div class="product discount product_filter">
 															<div class="product_image">
@@ -178,7 +178,7 @@
 																<h6 class="product_name"><a href="single.html">
 																		<%= prs[i].title %>
 																	</a></h6>
-																<div class="product_price">$<%= prs[i].price %> <span>$<%= prs[i].discount %> </span></div>
+																<div class="product_price">$<%= prs[i].price %> <span>$<%=  prs[i].price + prs[i].discount %> </span></div>
 															</div>
 														</div>
 														<div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
@@ -202,7 +202,7 @@
 														</div>
 														<% } %>
 
-															<% } %>
+														<% } %>
 
 
 

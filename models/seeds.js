@@ -29,10 +29,10 @@ const seedDB = async () => {
         const product = new Product({
             title: `${color[randomName]+" "+name[randomName]}`,
             description: description,
-            price: `${randomNum}`,
+            price: `${randomNum+randomDiscount+20}`,
             quantities: `${randomNum+randomImage}`,
             hidden: false,
-            discount: randomDiscount+randomNum,
+            discount: randomDiscount,
             image: `product_${randomImage}`,
             categories: `${categories[randomCate]}`,
             color: `${color[randomName]}`,
