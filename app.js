@@ -11,8 +11,7 @@ var connection = require('./connection');
 
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var contactRoute = require('./routes/contact');
+var contactRouter = require('./routes/contact');
 var shopRouter = require('./routes/shop');
 var blogRouter = require('./routes/blog');
 var app = express();
@@ -39,10 +38,9 @@ db.once("open", () => {
 });
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/contact', contactRoute);
-app.use('/shop', shopRouter);
-app.use('/blog', blogRouter);
+app.use('/', contactRouter);
+app.use('/', shopRouter);
+app.use('/', blogRouter);
 
 
 

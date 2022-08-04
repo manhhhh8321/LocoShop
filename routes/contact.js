@@ -1,12 +1,7 @@
 var express = require('express');
 var router = express.Router();
-const Blog = require('../models/blog')
+const contact_controller = require('../controllers/contact');
 
-/* GET home page. */
-router.get('/', async function(req, res, next) {
-  const blog = await Blog.find({});
-  res.render('contact', {blog});
-  
-});
+router.get('/contact', contact_controller.contactView);
 
 module.exports = router;
