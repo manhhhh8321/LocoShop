@@ -1,9 +1,11 @@
 var express = require('express');
 var router = express.Router();
+const Blog = require('../models/blog')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('contact');
+router.get('/', async function(req, res, next) {
+  const blog = await Blog.find({});
+  res.render('contact', {blog});
   
 });
 

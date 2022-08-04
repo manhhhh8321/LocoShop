@@ -14,7 +14,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var contactRoute = require('./routes/contact');
 var shopRouter = require('./routes/shop');
-
+var blogRouter = require('./routes/blog');
 var app = express();
 
 // view engine setup
@@ -42,6 +42,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/contact', contactRoute);
 app.use('/shop', shopRouter);
+app.use('/blog', blogRouter);
 
 
 
