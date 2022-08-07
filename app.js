@@ -12,7 +12,7 @@ var connection = require('./connection');
 
 var indexRouter = require('./routes/index');
 var contactRouter = require('./routes/contact');
-var shopRouter = require('./routes/shop');
+var productRouter = require('./routes/product');
 var blogRouter = require('./routes/blog');
 var app = express();
 
@@ -39,7 +39,7 @@ db.once("open", () => {
 
 app.use('/', indexRouter);
 app.use('/', contactRouter);
-app.use('/', shopRouter);
+app.use('/', productRouter);
 app.use('/', blogRouter);
 
 

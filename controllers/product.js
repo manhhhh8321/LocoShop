@@ -11,7 +11,7 @@ const allProductView = async function (req, res, next) {
     }
 
     const backToArray = Array.from(new Set(arr.toString().split(',')));
-    res.render('shop', { prs, blog, backToArray });
+    res.render('product', { prs, blog, backToArray });
 }
 
 module.exports = { allProductView };
