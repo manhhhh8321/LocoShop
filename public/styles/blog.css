@@ -1,0 +1,11 @@
+.blog-container {
+    display: flex;
+    margin-top: 2em;
+    justify-content: space-between;
+}
+.title-div {
+    margin-left: 3em;
+}
+.wrapper {
+    margin-top: 200px;
+}

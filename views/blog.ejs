@@ -1,14 +1,21 @@
-<%- include('../partials/header') %>
-<html>
-    <link rel="stylesheet" href="../public/styles/blog.css">
-    <body>
-        <div class="blog-container">
-            <div class="image-div">
-                <img src="" alt="">
-            </div>
-            <div class="title-div">
+<% layout('layout/boilerplate') %>
 
-            </div>
+    <link rel="stylesheet" href="/styles/blog.css">
+
+    <body>
+        <div class="wrapper">
+            <% for( let i = 0; i < 4; i++ ) { %>
+                <div class="blog-container">
+                
+                        <div class="image-div">
+                            <img src="images/<%=blog[i].image%>.jpg" alt="">
+                        </div>
+                        <div class="title-div">
+                            <h3><%= blog[i].title %> </h3>
+                            <p><%= blog[i].content %> </p>
+                        </div>
+                
+                </div>
+            <% } %>
         </div>
     </body>
-</html>

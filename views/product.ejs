@@ -175,9 +175,11 @@
 															<div class="favorite favorite_left"></div>
 															<div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-<%= newPr %>%  </span></div>
 															<div class="product_info">
-																<h6 class="product_name"><a href="single.html">
+																<h6 class="product_name">
+																	<a href="/product/<%=prs[i]._id %>">
 																		<%= prs[i].title %>
-																	</a></h6>
+																	</a>
+																</h6>
 																<div class="product_price">$<%= prs[i].price %> <span>$<%=  prs[i].price + prs[i].discount %> </span></div>
 															</div>
 														</div>
@@ -192,7 +194,7 @@
 																<div class="favorite favorite_left"></div>
 
 																<div class="product_info">
-																	<h6 class="product_name"><a href="single.html">
+																	<h6 class="product_name"><a href="/product/<%=prs[i]._id%>">
 																			<%= prs[i].title %>
 																		</a></h6>
 																	<div class="product_price">$<%= prs[i].price %></div>
@@ -215,7 +217,7 @@
 
 								</div>
 							</div>
-						</div>
+						</div> 
 					</div>
 				</div>
 			</div>

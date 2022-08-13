@@ -14,4 +14,13 @@ const allProductView = async function (req, res, next) {
     res.render('product', { prs, blog, backToArray });
 }
 
-module.exports = { allProductView };
+const productDetail = async function (req, res, next) {
+    let pid = req.params.id;
+    const pr = await Product.findOne({ _id: pid });
+    if (!pr) {
+        res.status(404).send('Product not found');
+    }
+    res.render('product_detail', { pr });
+}
+
+module.exports = { allProductView, productDetail };

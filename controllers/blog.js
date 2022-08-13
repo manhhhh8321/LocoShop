@@ -6,4 +6,4 @@ const blogView = async function (req, res) {
 
 }
 
-module.exports = {blogView};
+module.exports = { blogView };
