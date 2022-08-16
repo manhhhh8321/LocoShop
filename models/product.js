@@ -9,7 +9,7 @@ const productSchema = new Schema ({
     quantities: Number,
     hidden: Boolean,
     discount: {type: Number, default: 0},
-    image: String,
+    image: Array,
     categories: Array,
     color: String,
     onsale: Number
